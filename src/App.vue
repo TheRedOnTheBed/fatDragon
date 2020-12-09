@@ -3,19 +3,18 @@
     <img src="./assets/logo.png">
     <div>
       <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
+        If iView is successfully added to this project, you'll see an
+        <code v-text="'<Button>'"></code>
         below
       </p>
-      <el-button>el-button</el-button>
+      <van-button type="primary">Button</van-button>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'app',
   components: {
@@ -26,7 +25,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
