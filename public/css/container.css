@@ -1,0 +1,22 @@
+.el-header,
+.el-footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.el-footer {
+  border-top: 1px solid #dfe6e9;
+}
+.el-container {
+  height: 100%;
+}
+.el-main {
+  background-color: #ffffff;
+  color: #333;
+  /* line-height: 160px; */
+  margin: 0;
+  padding: 0;
+}
