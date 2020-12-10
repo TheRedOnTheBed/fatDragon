@@ -4,7 +4,7 @@
  * @Author: zzp
  * @Date: 2020-12-09 13:42:15
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-09 23:55:40
+ * @LastEditTime: 2020-12-10 00:21:29
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -18,7 +18,7 @@ const routes = [
   mineRouter,
   {
     path: '/*',
-    redirect: '/home/main',
+    redirect: '/home',
   },
 ]
 
