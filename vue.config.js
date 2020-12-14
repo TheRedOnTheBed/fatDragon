@@ -4,7 +4,7 @@
  * @Author: zzp
  * @Date: 2020-12-08 00:57:25
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-09 22:17:42
+ * @LastEditTime: 2020-12-14 21:15:27
  */
 const webpack = require('webpack')
 module.exports = {
@@ -19,6 +19,12 @@ module.exports = {
   },
   devServer: {
     open: false,
-    port: 8888
+    port: 8888,
+    proxy: {
+      '/movie': {
+        target: 'https://api.jisuapi.com',
+        changeOrigin: true,
+      },
+    }
   },
 }
