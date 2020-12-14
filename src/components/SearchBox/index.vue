@@ -4,13 +4,13 @@
  * @Author: zzp
  * @Date: 2020-12-08 17:09:35
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-09 23:23:31
+ * @LastEditTime: 2020-12-11 10:41:46
 -->
 <!-- 搜索框 -->
 <template>
   <div id="home-menu">
-    <div id="city-name">
-      <span>广州</span>
+    <div id="city-name" v-on:click="selectCity">
+      <span>{{this.$store.state.mineCity}}</span>
       <i class="el-icon-caret-bottom"></i>
     </div>
     <div id="home-search-box">
@@ -26,7 +26,13 @@ export default {
   name: 'searchBox',
   data () {
     return {
+
     }
+  },
+  methods: {
+    selectCity () {
+      this.$emit('fun', true)
+    },
   },
 }
 

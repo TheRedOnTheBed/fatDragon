@@ -4,15 +4,15 @@
  * @Author: zzp
  * @Date: 2020-12-08 00:38:17
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-10 12:37:58
+ * @LastEditTime: 2020-12-11 10:33:32
 -->
-<!--  -->
+<!-- 主页视图 -->
 <template>
   <div id="Home">
-    <el-container v-if="isSelectCity"></el-container>
+    <CityList v-if=" isSelectCity" @fun="changePage"></CityList>
     <el-container v-else>
       <Title></Title>
-      <SearchBox></SearchBox>
+      <SearchBox v-on:fun="changePage"></SearchBox>
       <el-main>
         <keep-alive>
           <router-view></router-view>
@@ -29,12 +29,14 @@
 import Title from '@/components/Header'
 import FooterMenu from '@/components/Footer'
 import SearchBox from '@/components/SearchBox'
+import CityList from '@/components/City'
 export default {
   name: 'Home',
   components: {
     Title,
     FooterMenu,
     SearchBox,
+    CityList
   },
   data () {
     return {
@@ -42,6 +44,11 @@ export default {
     }
   },
   methods: {
+    changePage (data) {
+      if (data) {
+        this.isSelectCity = !this.isSelectCity
+      }
+    }
   },
 }
 

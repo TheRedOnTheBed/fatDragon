@@ -2,21 +2,22 @@
  * @Descripttion: 
  * @version: 
  * @Author: zzp
- * @Date: 2020-12-08 00:38:17
+ * @Date: 2020-12-10 19:03:58
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-10 21:17:13
+ * @LastEditTime: 2020-12-10 21:39:28
 -->
-<!-- “我的”视图 -->
+<!--  -->
 <template>
   <div id="Home">
     <el-container class="rl-container">
+      <div class="register-title">
+        <h1>邮箱注册</h1>
+        <p>欢迎加入肥龙影院!</p>
+      </div>
       <el-main>
-        <div class="login-img">
-          <van-image round width="8rem" height="8rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-        </div>
         <el-form
-          :model="loginValidateForm"
-          ref="loginValidateForm"
+          :model="registerValidateForm"
+          ref="registerValidateForm"
           class="demo-dynamic"
           status-icon
         >
@@ -27,9 +28,9 @@
                 { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
               ]"
           >
-            <label for="username">用户名</label>
+            <label for="email">邮箱</label>
             <el-input
-              v-model="loginValidateForm.username"
+              v-model="registerValidateForm.email"
               placeholder="请输入您的邮箱地址"
               @focus="onFocus1"
               @blur="onBlur1"
@@ -37,55 +38,41 @@
             <span class="spin" :style="styleStr"></span>
           </el-form-item>
           <el-form-item>
-            <label for="uwerpwd">密码</label>
+            <label for="verifyCode">验证码</label>
             <el-input
-              v-model="loginValidateForm.userpwd"
-              placeholder="请输入密码"
-              type="password"
+              v-model="registerValidateForm.verifyCode"
+              placeholder="请输入验证码"
               @focus="onFocus2"
               @blur="onBlur2"
             ></el-input>
+            <el-button type="text" class="get-code" size="medium">获取验证码</el-button>
             <span class="spin" :style="styleStr2"></span>
           </el-form-item>
           <el-form-item>
-            <el-button round class="submit">登录</el-button>
+            <el-button round class="submit">同意并注册</el-button>
           </el-form-item>
         </el-form>
-        <div class="other-items">
-          <p>
-            其他登录方式：
-            <el-button type="primary" icon="el-icon-mobile-phone" circle></el-button>
-          </p>
-          <router-link to="/register">
-            <p style="color: red">免费注册</p>
-          </router-link>
-        </div>
+        <p style="color: #ddd; font-size: 14px; margin-left: 25px">已阅读并同意以下协议</p>
       </el-main>
-      <el-footer>
-        <FooterMenu></FooterMenu>
-      </el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
-import FooterMenu from '@/components/Footer'
 export default {
-  name: 'Mine',
-  components: {
-    FooterMenu
-  },
+  name: 'Register',
   data () {
     return {
-      loginValidateForm: {
-        username: "",
-        userpwd: "",
+      registerValidateForm: {
+        email: "",
+        verifyCode: "",
       },
       styleStr: "width:0",
       styleStr2: "width:0",
     }
   },
   methods: {
+    onLoad () { },
     onFocus1 () {
       this.styleStr = "width:100%"
     },

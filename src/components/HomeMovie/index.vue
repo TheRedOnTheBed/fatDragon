@@ -4,7 +4,7 @@
  * @Author: zzp
  * @Date: 2020-12-09 23:45:57
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-10 12:43:09
+ * @LastEditTime: 2020-12-12 12:38:56
 -->
 <!-- 主页中的电影界面 -->
 <template>
@@ -34,6 +34,11 @@
                   <van-tag color="#747d8c" plain>好看的电影</van-tag>
                 </p>
               </div>
+              <van-button
+                size="small"
+                color="linear-gradient(to right, #ff6034, #ee0a24)"
+                style="width:60px"
+              >购票</van-button>
             </li>
           </ul>
         </van-list>
@@ -176,6 +181,7 @@ export default {
   display: flex;
   padding-bottom: 10px;
   margin-top: 12px;
+  align-items: center;
   border-bottom: 1px #e6e6e6 solid;
 }
 .movie-img {
@@ -187,6 +193,8 @@ export default {
 }
 .movie-introduce {
   margin-left: 15px;
+  flex: 1;
+  position: relative;
 }
 .movie-introduce h2 {
   font-size: 17px;
