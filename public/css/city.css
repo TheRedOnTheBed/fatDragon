@@ -1,0 +1,86 @@
+#SelectCity {
+  height: 100%;
+}
+.el-header label {
+  font: 16px "Consolas";
+}
+
+.el-header label:nth-child(1) {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.el-header label:nth-child(2) {
+  font-weight: bold;
+  position: relative;
+  right: 20px;
+}
+
+.el-main {
+  background-color: #ffffff;
+  color: #333;
+  /* line-height: 160px; */
+  margin: 0;
+  padding: 0;
+}
+.el-container {
+  height: 100%;
+}
+#search-box {
+  display: flex;
+  height: 55px;
+  align-items: center;
+  background: #f1f2f6;
+  z-index: 10;
+}
+#search-box .search-input {
+  margin: 0 10px;
+}
+.city-body {
+  background: #ffffff;
+}
+.easy-mounted {
+  background: #f1f2f6;
+}
+.now-city,
+.history-city,
+.hot-city {
+  /* margin-bottom: 10px; */
+  padding-bottom: 10px;
+}
+.city-body .easy-mounted h2 {
+  padding-left: 15px;
+  line-height: 30px;
+  font-size: 14px;
+  background: #f1f2f6;
+  font-weight: normal;
+}
+.city-body .easy-mounted ul li {
+  float: left;
+  width: 28%;
+  height: 33px;
+  line-height: 33px;
+  border: 1px solid #8395a7;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-left: 3%;
+  color: #747d8c;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+}
+.clearfix {
+  background: #f1f2f6;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.van-index-anchor {
+  background: #f1f2f6;
+  font-size: 15px;
+  border-top: 1px solid#dcdde1;
+  border-bottom: 1px solid#dcdde1;
+}

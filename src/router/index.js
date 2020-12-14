@@ -4,14 +4,20 @@
  * @Author: zzp
  * @Date: 2020-12-09 13:42:15
  * @LastEditors: zzp
- * @LastEditTime: 2020-12-09 14:12:30
+ * @LastEditTime: 2020-12-10 21:12:29
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import homeRouter from './Home'
+import mineRouter from './Mine'
+import registerRouter from './Register'
 
 Vue.use(VueRouter)
 
 const routes = [
+  homeRouter,
+  mineRouter,
+  registerRouter,
   {
     path: '/*',
     redirect: '/home',
